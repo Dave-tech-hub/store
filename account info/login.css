@@ -1,0 +1,192 @@
+/* Importing font Algeria */
+@import url('https://fonts.googleapis.com/css2?family=Brush+Script+MT&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #111;
+}
+
+.container,
+.container1{
+    border: 1px solid #333;
+    border-radius: 3px;
+    padding: 20px;
+    text-align: center;
+}
+
+toggle
+
+.container .logo{
+    font-family: 'Brush Script MT', cursive;
+    font-size: 40px;
+}
+
+.container .input-area{
+    position: relative;
+    margin: 25px 0;
+}
+.container .input-area input{
+    width: 400px;
+    height: 60px;
+    padding: 0 14px;
+    padding-right: 40px;
+    font-size: 20px;
+    outline: none;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    background: #111;
+}
+
+.container .input-area input:focus,
+.container .input-area input:valid{
+    border: 3px solid aqua;
+}
+
+.container .input-area label{
+    position: absolute;
+    top: 50%;
+    left: 7px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    padding: 0 10px;
+    pointer-events: none;
+    transition: 0.4s ease;
+}
+
+.container .input-area input:focus + label,
+.container .input-area input:valid + label{
+    top: 0;
+    font-size: 14px;
+    color: aqua;
+    background: #111;
+}
+
+.container .input-area .toggle{
+    position: absolute;
+    font-size: 25px;
+    top: 50%;
+    right: 18px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 15px;
+    user-select: none;
+    z-index: 10;
+}
+
+
+.container .button{
+    padding: 10px 0 15px 0;
+}
+
+.container .button .login{
+    width: 100%;
+    height: 55px;
+    font-size: 20px;
+    font-weight: bold;
+    background: aqua;
+    border: 2px solid aqua;
+    border-radius: 5px;
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.container .button .login:hover{
+    background: hsl(180, 100%, 45%);
+    border: 2px solid hsl(180, 100%, 45%);
+}
+
+.container .button .login:active{
+    background: aqua;
+    border: 2px solid aqua;
+}
+
+.container .options{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.container .options p{
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.container .options .google-option{
+    font-size: 16px;
+    font-weight: bold;
+    color: aqua;
+    margin: 5px 0;
+}
+
+.container .options .forget-option{
+    font-size: 14px;
+    color: aqua;
+    cursor: pointer;
+}
+
+.container .options a{
+    text-decoration: none;
+}
+
+.container .options .google-option:hover{
+    text-decoration: underline;
+}
+
+.container1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 440px;
+    height: 90px;
+    margin-top: 15px;
+}
+
+.container1 p{
+    font-size: 18px;
+    margin-right: 6px;
+}
+
+.container1 a{
+    font-size: 17px;
+    text-decoration: none;
+    color: aqua;
+}
+
+.container1 a:hover{
+    text-decoration: underline;
+}
+
+
+/* ForgetBox styling */
+#forget-section{
+    display: none;
+}
+
+.reset-section .container .options{
+    flex-direction: row;
+}
+
+.reset-section .container .options .option-question{
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 4px;
+}
+
+.reset-section .container .options .option-direct{
+    font-size: 14px;
+    color: aqua;
+}

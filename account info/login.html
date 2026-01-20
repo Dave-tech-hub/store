@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Custom link -->
+    <title>Damie Store</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Login section -->
+    <section id="login-section">
+        <div class="container">
+            <h1 class="logo">Damie Store</h1>
+            <form action="#" id="loginForm" autocomplete="off">
+                <div class="input-area">
+                    <input type="text" class="email" id="logMail" required>
+                    <label for="email" id="mailLabel">Email</label>
+                </div>
+                <div class="input-area">
+                    <input type="password" class="password" id="logPassword" required>
+                    <label for="password">Password</label>
+                    <i class="fa-solid fa-eye toggle" id="toggle" onclick="togglePassword('logPassword', this)"></i>
+                </div>
+                <div class="button">
+                    <button  type="submit" class="login" id="logBtn">Login</button>
+                </div>
+            </form>
+
+            <!-- Options section -->
+            <div class="options">
+                <p>OR</p>
+                <a href="#" class="google-option">Login with google</a>
+                <a href="forget.html" class="forget-option" id="forgetlink">Forget password?</a>
+            </div>
+        </div>
+
+        <!-- Signup option -->
+        <div class="container1">
+            <p>Don't have an account?</p>
+            <a href="signup.html">Signup</a>
+        </div>
+    </section>
+
+    <script src="login.js">
+        //   localStorage.setItem("user", JSON.stringify(user));
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Custom links -->
+    <title>Damie Store</title>
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Signup section -->
+    <div class="container">
+        <h1 class="logo">Damie Store</h1>
+        <form action="#" id="signupForm" autocomplete="off">
+            <div class="input-area">
+                <input type="text" class="email" id="mailInput" required>
+                <label for="email">Email or Phone number</label>
+            </div>
+            <div class="input-area">
+                <input type="text" class="name" id="firstName" required>
+                <label for="email">First Name</label>
+            </div>
+            <div class="input-area">
+                <input type="text" class="name" id="lastName" required>
+                <label for="email">Last Name</label>
+            </div>
+            <div class="input-area">
+                <input type="password" class="password" id="passwordInput" required>
+                <label for="password">Password</label>
+                <i class="fa-solid fa-eye toggle" onclick="togglePassword('passwordInput', this)"></i>
+            </div>
+            <div class="input-area">
+                <input type="password" class="password" id="confirmPassword" required>
+                <label for="email">Confirm Password</label>
+                <i class="fa-solid fa-eye toggle" onclick="togglePassword('confirmPassword', this)"></i>
+            </div>
+            <div class="button">
+                <button type="submit" class="login" id="signupBtn">Sign up</button>
+            </div>
+        </form>
+
+        <!-- Options section -->
+        <div class="options">
+            <div class="divider-line">
+                <hr>
+                <p>OR</p>
+            </div>
+            <p class="option-question">Already have an account?</p>
+            <a href="login.html" class="login-link">Login</a>
+        </div>
+    </div>
+
+    <script src="signup.js"></script>
+</body>
+</html>

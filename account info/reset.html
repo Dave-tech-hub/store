@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Custom links -->
+    <title>Damie Store</title>
+    <link rel="stylesheet" href="forget.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- reset section -->
+    <div id="resetBox">
+        <div class="container">
+            <h1 class="logo">Damie Store</h1>
+            <form action="#" id="resetForm" autocomplete="off">
+                <div class="input-area">
+                    <input type="number" class="codeInput input" id="codeInput" required>
+                    <label for="email">Enter code</label>
+                </div>
+                <div class="input-area">
+                    <input type="password" class="password input" id="newPassword" required>
+                    <label for="password">New password</label>
+                    <i class="fa-solid fa-eye toggle" id="toggle" onclick="togglePassword('newPassword', this)"></i>
+                </div>
+                <div class="input-area">
+                    <input type="password" class="password input" id="confirmNewPassword" required>
+                    <label for="password">Confrim new password</label>
+                    <i class="fa-solid fa-eye toggle" id="toggle" onclick="togglePassword('confirmNewPassword', this)"></i>
+                </div>
+                <div class="button">
+                    <button type="submit" class="login" id="resetBtn">Reset password</button>
+                </div>
+            </form>
+
+            <!-- reset options section -->
+            <div class="options">
+                <a href="login.html" class="option-direct" target="_blank">Back to login</a>
+            </div>
+        </div>
+
+        <!-- reset Signup option -->
+        <div class="container1">
+            <p>Don't have an account?</p>
+            <a href="signup.html">Signup</a>
+        </div>
+    </div>
+
+    <script src="reset.js"></script>
+</body>
+</html>

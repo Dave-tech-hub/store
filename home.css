@@ -1,0 +1,611 @@
+@import url('https://fonts.googleapis.com/css2?family=Brush+Script+MT&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    /* border: 1px solid #fff; */
+}
+
+:root{
+    --brand-color: aqua;
+    --brand-font: 'Brush Script MT', cursive;
+}
+
+a{
+    text-decoration: none;
+    color: #111;
+}
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 60px;
+    background-color: #111;
+    border-bottom: 1px solid #fff;
+    box-shadow: 10px 7px 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+}
+
+.navbar .logo,
+.navbar .logo span{
+    font-family: var(--brand-font);
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.navbar .logo span{
+    color: var(--brand-color);
+}
+
+.navbar .nav{
+    margin-left: 20px;
+}
+
+.navbar .navlink{
+    font-size: 16px;
+    font-weight: 100;
+    color: #fff;
+    margin-right: 20px;
+}
+
+.navbar .navlink:hover{
+    color: var(--brand-color);
+}
+
+.navbar .account-section{
+    display: flex;
+    align-items: center;
+}
+
+.navbar .account-section #userName{
+    color: var(--brand-color);
+    padding-right: 18px;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.5s ease;
+}
+
+.navbar .account-section .cart{
+    padding-right: 20px;
+    gap: 5px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.navbar .account-section .cart i{
+    font-size: 23px;
+    position: relative;
+}
+
+.navbar .account-section .cart .cartValue{
+    position: absolute;
+    top: 40%; right: 13.3%;
+    transform: translateY(-50%);
+    background: var(--brand-color);
+    color: #000;
+    width: 14px;
+    height: 14px;
+    font-size: 14px;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    text-align: center;
+    line-height: 15px;
+}
+
+.navbar .account-section .signinBtn{
+    width: 90px;
+    height: 35px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    background: var(--brand-color);
+    cursor: pointer;
+}
+
+.navbar .account-section .signinBtn:hover{
+    background: hsl(180, 100%, 45%);
+}
+
+.navbar .account-section .signinBtn:active{
+    background: var(--brand-color);
+}
+
+/* Header Section */
+.homeHeader{
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+}
+
+/* Each slide */
+.slide {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* Images */
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(60%);
+}
+
+/* Text overlay */
+.slide-text {
+    position: absolute;
+    top: 55%;
+    left: 10%;
+    transform: translateY(-55%);
+    color: white;
+    max-width: 800px;
+    z-index: 2;
+}
+
+.slide-text h1 {
+    font-size: 3.7rem;
+    font-weight: 700;
+    margin: 0 0 20px;
+}
+
+.slide-text button {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border: 2px solid var(--brand-color);
+    background: transparent;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.slide-text button:hover {
+    background: var(--brand-color);
+    color: black;
+}
+
+.overlay{
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.slider .dots{
+    text-align: center;
+    position: absolute;
+    top: 92%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    height: 20em;
+    z-index: 3;
+}
+
+.slider .dots .dot{
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.8);
+    display: inline-block;
+    margin: 0 3px;
+    transition: all 0.5s ease-in-out;
+}
+
+.slider .dots .dot:hover{
+    background: var(--brand-color);
+}
+
+.slider .dots .dot.active{
+    background: var(--brand-color);
+    height: 13px;
+    width: 13px;
+}
+
+/* LOGO SECTION LOOP*/
+.logoSlide{
+    margin: 0 0;
+    width: 100%;
+    padding: 10px 0;
+    background: #ccc;
+    box-shadow: 3px 3px 30px hsl(0, 0%, 80%);
+    display: flex;
+    overflow-x: auto;
+}
+
+.logoSlide::-webkit-scrollbar{
+    display: none;
+}
+
+.loop{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4em;
+    animation: loop 20s infinite linear;
+    padding-right: 3em;
+}
+
+.logo{
+    flex: 0 0 5em;
+    font-size: 30px;
+    font-family: var(--brand-font);
+    text-align: center;
+    align-items: center;
+}
+
+@keyframes loop{
+    from {translate: 0;}
+    to {translate: -100%;}
+}
+
+/* TOP PICKS SECTION */
+.topPicks{
+    padding: 40px 50px;
+    background-color: #111;
+    color: #fff;
+}
+
+.subHead{
+    font-family: var(--brand-font);
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.cardContainer{
+    position: relative;
+}
+
+.cardGroup{
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    margin-bottom: 60px;
+}
+
+.group{
+    height: 385px;
+    border: 1px solid #fff;
+    color: #fff;
+    margin-right: 40px;
+}
+
+.group img{
+    width: 260px;
+    height: 270px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.group .img{
+    margin-bottom: 15px;
+    background: #fff;
+}
+
+.group .groupDetails{
+    padding: 0px 10px 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.groupDetails .text{
+    font-size: 20px;
+}
+
+.productTitle{
+    max-width: 130px;
+}
+
+.group .productBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    margin-top: 8px;
+}
+
+.productBtn button{
+    width: 240px;
+    background: none;
+    outline: none;
+    font-size: 18px;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.productBtn button:hover{
+    text-decoration: underline;
+}
+
+.cardContainer .button{
+    position: absolute;
+    top: 37%;
+    left: 0;
+    width: 100%;
+}
+
+.cardContainer .button .productPrev,
+.cardContainer .button .productNext{
+    position: absolute;
+    top: 37%;
+    transform: translateY(-50%);
+    background: #111;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 8px 13px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.cardContainer .button .productPrev{
+    left: 3px;
+}
+
+.cardContainer .button .productNext{
+    right: 3px;
+}
+
+.cardContainer .button .productPrev:hover,
+.cardContainer .button .productNext:hover{
+    background: #222;
+    color: #eee;
+    border: 1px solid #eee;
+}
+
+.cardContainer .containerBtn{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.containerBtn button{
+    padding: 14px 36px;
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 320px;
+    outline: none;
+    font-size: 19px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.containerBtn button:hover{
+    background: none;
+    color: #fff;
+}
+
+/* CART TAB */
+.cartTab{
+    background: #222;
+    position: fixed;
+    inset: 0 -500px 0 auto;
+    width: 20rem;
+    padding-block: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    box-shadow: #bbbbbb0d -10px -10px 20px;
+    transition: .3s ease-in-out;
+}
+
+.cartTabActive{
+    inset: 0 0 0 auto;
+}
+
+.cartList{
+    flex: 1;
+    width: 100%;
+    margin-top: 15px;
+    overflow: auto;
+}
+
+.cartList::-webkit-scrollbar{
+    width: 0;
+}
+
+.cartList .item .itemDetails{
+    pointer-events: none;
+}
+
+.totalContainer{
+    width: 100%;
+    background: var(--brand-color);
+    color: #000;
+    text-align: center;
+    margin-block: 1.5rem;
+    padding-block: .7rem;
+}
+
+.totalContainer h4{
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.btnContainer .btn{
+    background: #111;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 10px;
+    transition: .3s ease-in-out;
+}
+
+.btnContainer .btn:hover{
+    background: aqua;
+    color: #111;
+}
+
+.btnContainer .closeBtn{
+    margin-right: 20px;
+}
+
+.item{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 15px;
+}
+
+.cartList .item:nth-child(even){
+    background: #111;
+}
+
+.item .imageContainer img{
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.item .itemDetails{
+    min-width: 130px;
+    max-width: 130px;
+}
+
+.item .itemDetails h4{
+    font-size: 15px;
+}
+
+.item .itemDetails .itemPrice{
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+.item .itemBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item .itemBtn .quantityBtn{
+    background: var(--brand-color);
+    color: #000;
+    width: 16px;
+    height: 18px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 17px;
+    cursor: pointer;
+}
+
+.item .itemBtn .quantityBtn i{
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+.item .itemBtn .quantityValue{
+    font-size: 16px;
+    font-weight: 400;
+    margin-inline: 10px;
+}
+
+
+
+
+
+
+
+/* RESPONSIVENESS */
+/* @media(max-width: 2560px){
+    .navbar{
+        padding: 15px 60px;
+    }
+
+    .navbar .logo,
+    .navbar .logo span{
+        font-size: 55px;
+    }
+
+    .navbar .navlink{
+        font-size: 25px;
+        margin-right: 35px;
+    }
+
+    .navbar .account-section #userName{
+        font-size: 25px;
+        margin-right: 15px;
+    }
+
+    .navbar .account-section .cart{
+        margin-right: 20px;
+    }
+
+    .navbar .account-section .cart i{
+        font-size: 33px;
+    }
+
+    .navbar .account-section .cart .cartValue{
+        right: 7.7%;
+    }
+
+    .navbar .account-section .signinBtn{
+        width: 100px;
+        height: 45px;
+        font-size: 20px;
+    } */
+
+    /* Header Section */
+    /* .slide-text {
+        max-width: 1300px;
+    }
+
+    .slide-text h1 {
+        font-size: 90px;
+    }
+
+    .slide-text button {
+        padding: 20px 45px;
+        font-size: 32px;
+        border: 4px solid var(--brand-color);
+    }
+
+    .slider .dots .dot{
+        height: 16px;
+        width: 16px;
+    }
+
+    .slider .dots .dot.active{
+        height: 19px;
+        width: 19px;
+    }
+
+    .logo{
+        font-size: 45px;
+    }
+} */

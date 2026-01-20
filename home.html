@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Custom links -->
+    <title>Damie Store</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="../intellipaat/slider nav/collection.html">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/intellipaat/home.html" class="logo">Damie <span>Store</span></a>
+        <div class="nav">
+            <a href="#" class="navlink">Best Sellers</a>
+            <a href="#" class="navlink">Promotions</a>
+            <a href="shop.html" target="_blank" class="navlink">Shop</a>
+        </div>
+        <div class="account-section">
+            <a href="#" id="userName"></a>    
+            <div class="cart">
+                <i class="uil uil-shopping-cart"></i>
+                <span class="cartValue">0</span>
+            </div>
+            <button id="signinBtn" class="signinBtn">Login</button>
+        </div>
+    </nav>
+
+    <header class="homeHeader">
+        <div class="slider">
+            <div class="slide fade active">
+                <img src="img/banner1.jpg" alt="Slide 1">
+                <div class="slide-text">
+                    <h1>Made For Everyone.</h1>
+                    <button id="shopCollection">Shop Collection</button>
+                </div>
+            </div>
+
+            <div class="slide fade">
+                <img src="img/banner4.jpg" alt="Slide 2">
+                <div class="overlay"></div>
+                <div class="slide-text">
+                    <h1>Timeless. Minimal. Unisex.</h1>
+                    <button id="explore">Explore Essentials</button>
+                </div>
+            </div>
+
+            <div class="slide fade">
+                <img src="img/banner3.jpg" alt="Slide 3">
+                <div class="overlay"></div>
+                <div class="slide-text">
+                    <h1>Style Without Labels.</h1>
+                    <button id="lookbook">View Lookbook</button>
+                </div>
+            </div>
+
+            <div class="dots">
+                <div class="dot active" onclick="currentSlide(0)"></div>
+                <div class="dot" onclick="currentSlide(1)"></div>
+                <div class="dot" onclick="currentSlide(2)"></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="logoSlide">
+        <div class="loop">
+            <div class="logo">EKSU</div>
+            <div class="logo">List Up</div>
+            <div class="logo">WEMA</div>
+            <div class="logo">The Saint</div>
+            <div class="logo">Smart School</div>
+            <div class="logo">Trade Fair</div>
+            <div class="logo">SUG</div>
+        </div>
+        <div aria-hidden class="loop">
+            <div class="logo">EKSU</div>
+            <div class="logo">List Up</div>
+            <div class="logo">WEMA</div>
+            <div class="logo">The Saint</div>
+            <div class="logo">Smart School</div>
+            <div class="logo">Trade Fair</div>
+            <div class="logo">SUG</div>
+        </div>
+        <div aria-hidden class="loop">
+            <div class="logo">EKSU</div>
+            <div class="logo">List Up</div>
+            <div class="logo">WEMA</div>
+            <div class="logo">The Saint</div>
+            <div class="logo">Smart School</div>
+            <div class="logo">Trade Fair</div>
+            <div class="logo">SUG</div>
+        </div>
+    </div>
+
+    <section class="topPicks">
+        <h2 class="subHead">Top Picks</h2>
+        <div class="cardContainer">
+            <div class="button">
+                <button class="productPrev">&#10094;</button>
+                <button class="productNext">&#10095;</button>
+            </div>
+
+            <div class="cardGroup">
+               <!-- render products -->
+            </div>
+
+            <div class="containerBtn">
+                <button id="shop">Shop Now</button>
+            </div>
+
+            <!-- CART TAB -->
+            <div class="cartTab">
+                <h3>Your Cart</h3>
+
+                <div class="cartList">
+                    <!-- render cart items here -->
+                </div>
+
+                <div class="totalContainer">
+                    <h4>Total:</h4>
+                    <h4 class="cartTotal">$0.00</h4>
+                </div>
+
+                <div class="btnContainer">
+                    <a href="#" class="btn closeBtn">Close</a>
+                    <a href="#" class="btn">Checkout</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="home.js"></script>
+    <script src="product.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
